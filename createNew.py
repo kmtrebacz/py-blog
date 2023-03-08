@@ -52,7 +52,7 @@ def writeCommands():
 
 
           elif inputCommands == "-crntVer":
-               print("Version: 0.0.1")
+               print("Version: 0.0.2")
 
           elif inputCommands == "-quit":
                sys.exit(0)
