@@ -1,4 +1,12 @@
-import sys, os
+'''
+kmtrebacz/BlogCreator
+
+Main app of all of project.
+'''
+
+import sys
+import os
+import time as t
 
 _blogTitle = ""
 _blogSubtitle = ""
@@ -6,9 +14,19 @@ _blogDescription = ""
 _blogAuthor = ""
 _blogTheme = ""
 _adminPass = ""
+__VERSION__ = "0.0.3"
+
+
 
 def clr():
      os.system('cls')
+
+
+def inputIsNone(var, inpCont):
+     while var == None or var == "":
+          clr()
+          var = input(inpCont)
+
 
 def writeCommands():
 
@@ -26,33 +44,53 @@ def writeCommands():
           elif inputCommands == "-crtNew":
                clr()
                print(inputCommands)
+               print("! All fields are mandatory to complete !")
+
 
                print("Basic informations")
+
                _blogTitle = input("Enter a blog title: ")
+               inputIsNone(_blogTitle, "Enter a blog title: ")
+
                _blogSubtitle = input("Enter a blog subtitle: ")
+               inputIsNone(_blogSubtitle, "Enter a blog subtitle: ")
+
                _blogDescription = input("Enter a blog description: ")
+               inputIsNone(_blogDescription, "Enter a blog description: ")
+
                _blogAuthor = input("Enter your name: ")
+               inputIsNone(_blogDescription, "Enter your name: ")
+
+
 
                print("\nAppearance")
+
                _blogTheme = input("Choose a theme for your blog: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
+
                while not (_blogTheme == "1" or _blogTheme == "2" or _blogTheme == 1 or _blogTheme == 2):
                     clr()
                     _blogTheme = input("Choose a theme for your blog: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
 
-               print("\nManagement")
-               _adminPass = input("Enter a password that you will use, when you want to log in to managment side: ")
-               _adminPassRepeat = input("Repeat: ")
 
+               print("\nManagement")
+
+               _adminPass = input("Enter a password that you will use, when you want to log in to managment side: ")   # ! inputIsDone -> add
+
+               _adminPassRepeat = input("Repeat: ")
                while _adminPass != _adminPassRepeat: 
                     _adminPassRepeat = input("Repeat: ")
                print("Correct")
+
+               clr()
+               print("Everything is done")
+               t.sleep(1.2)
 
                clr()
                print("\n Now, will be created blog for you ;)")
 
 
           elif inputCommands == "-crntVer":
-               print("Version: 0.0.2")
+               print("Version: ", __VERSION__)
 
           elif inputCommands == "-quit":
                sys.exit(0)
@@ -61,5 +99,14 @@ def writeCommands():
                print("Error [1] -> Wrong command. Please write again")
 
 
+def startApp():
+     print("kmtrebacz/BlogCreator")
+     print("Version: ", __VERSION__)
+     t.sleep(1.5)
+
+
+
 if __name__ == "__main__":
+     startApp()
+
      writeCommands()
