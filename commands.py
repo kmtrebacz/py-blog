@@ -22,6 +22,7 @@ _adminPass = ""
 def clr():
      os.system('cls')
 
+
 # REPEAT INPUT WHILE ITS NONE
 def inputIsNone(var, inpCont):
      while var == None or var == "":
@@ -39,7 +40,8 @@ def getPassIsNone(var, inpCont):
 def main():
 
      while True:
-          inputCommands = input()
+          inputCommands = input(" > ")
+
 
           #
           # HELP
@@ -59,6 +61,7 @@ def main():
                clr()
                print(inputCommands)
                print("! All fields are mandatory to complete !")
+
 
                #
                # BASIC INFOTMATIONS ABOUT BLOG
@@ -108,8 +111,6 @@ def main():
                t.sleep(1.2)
 
                print("\nNow, will be created blog for you ;)")
-
-               # TODO: Create index.html, style.css, main.js, python app that manage exiting blog
 
 
           #
