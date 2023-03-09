@@ -1,12 +1,14 @@
 '''
-kmtrebacz/BlogCreator
+kmtrebacz/BlogCreator commands.py
 
-Main app of all of project.
+Python file that let you write commands
 '''
+
 
 import sys
 import os
 import time as t
+from getpass import getpass
 
 _blogTitle = ""
 _blogSubtitle = ""
@@ -14,39 +16,53 @@ _blogDescription = ""
 _blogAuthor = ""
 _blogTheme = ""
 _adminPass = ""
-__VERSION__ = "0.0.3"
 
 
-
+# CLEARING CMD
 def clr():
      os.system('cls')
 
-
+# REPEAT INPUT WHILE ITS NONE
 def inputIsNone(var, inpCont):
      while var == None or var == "":
           clr()
           var = input(inpCont)
 
 
-def writeCommands():
+# REPEAT GETPASS WHILE ITS NONE
+def getPassIsNone(var, inpCont):
+     while var == None or var == "":
+          clr()
+          var = getpass(inpCont)
+
+# WHILE COMMANDS INPUT
+def main():
 
      while True:
           inputCommands = input()
 
+          #
+          # HELP
+          #
           if inputCommands == "-help":
-               print("      HELP      ")
-               print("================")
+               print(" HELP ")
+               print("======")
                print("-help  ->  show all avaliable commands")
                print("-crtNew  ->  create new blog")
-               print("-crntVer  ->  print current version of program")
                print("-quit  ->  quit a program")
 
+
+          #
+          # CREATING NEW BLOG
+          #
           elif inputCommands == "-crtNew":
                clr()
                print(inputCommands)
                print("! All fields are mandatory to complete !")
 
-
+               #
+               # BASIC INFOTMATIONS ABOUT BLOG
+               #
                print("Basic informations")
 
                _blogTitle = input("Enter a blog title: ")
@@ -62,7 +78,9 @@ def writeCommands():
                inputIsNone(_blogDescription, "Enter your name: ")
 
 
-
+               #
+               # BLOG'S APPEARANCE
+               #
                print("\nAppearance")
 
                _blogTheme = input("Choose a theme for your blog: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
@@ -72,41 +90,36 @@ def writeCommands():
                     _blogTheme = input("Choose a theme for your blog: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
 
 
+               #
+               # BLOG'S MANAGMENT
+               #
                print("\nManagement")
 
-               _adminPass = input("Enter a password that you will use, when you want to log in to managment side: ")   # ! inputIsDone -> add
+               _adminPass = getpass("Enter a password that you will use, when you want to log in to managment side: ")
+               getPassIsNone(_adminPass, "Enter a password that you will use, when you want to log in to managment side: ")
 
-               _adminPassRepeat = input("Repeat: ")
+               _adminPassRepeat = getpass("Repeat: ")   #Checking password
                while _adminPass != _adminPassRepeat: 
-                    _adminPassRepeat = input("Repeat: ")
+                    _adminPassRepeat = getpass("Repeat: ")
                print("Correct")
 
                clr()
                print("Everything is done")
                t.sleep(1.2)
 
-               clr()
-               print("\n Now, will be created blog for you ;)")
+               print("\nNow, will be created blog for you ;)")
+
+               # TODO: Create index.html, style.css, main.js, python app that manage exiting blog
 
 
-          elif inputCommands == "-crntVer":
-               print("Version: ", __VERSION__)
-
+          #
+          # QUIT
+          #
           elif inputCommands == "-quit":
                sys.exit(0)
 
+          #
+          # ERROR
+          #
           else:
                print("Error [1] -> Wrong command. Please write again")
-
-
-def startApp():
-     print("kmtrebacz/BlogCreator")
-     print("Version: ", __VERSION__)
-     t.sleep(1.5)
-
-
-
-if __name__ == "__main__":
-     startApp()
-
-     writeCommands()
