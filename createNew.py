@@ -8,6 +8,8 @@ Python file that get imformation about blog and create it.
 import os
 import time as t
 from getpass import getpass
+# import themes
+import the_themes_times
 
 
 _blogTitle = ""
@@ -88,3 +90,8 @@ def main():
      t.sleep(1.2)
 
      print("\nNow, will be created blog for you ;)")
+
+     if _blogTheme == "1":
+          print("1")
+     elif _blogTheme == "2":
+          the_themes_times.main(_blogTitle, _blogSubtitle, _blogDescription, _blogAuthor)
