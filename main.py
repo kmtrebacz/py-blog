@@ -9,7 +9,7 @@ import os
 import time as t
 import commands
 
-__VERSION__ = "0.0.4"
+__VERSION__ = "0.0.5"
 
 
 def clr():
