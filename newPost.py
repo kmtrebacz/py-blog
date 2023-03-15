@@ -22,7 +22,7 @@ def main():
 
      print("Creating new post")
      _newPost = open(os.path.join('./', _postFileName), "w")
-     _newPost.write(_postContent)
+     _newPost.write("<?php include('./top.php');?>" + _postContent + "<?php include('./bottom.php');?>")
      _newPost.close()
      print("Created new post")
 
@@ -31,9 +31,7 @@ def main():
      _postLink.write("<a href='./" + _postFileName + "'>" + _postDate + "-" + _postTitle + "</a>")
      _postLink.close()
      print("Added link to sideNav.html")
-     
-
-
+    
 
 if __name__ == "__main__":
      main()

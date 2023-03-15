@@ -1,5 +1,5 @@
 '''
-kmtrebacz/BlogCreator commands.py
+kmtrebacz/py-blog commands.py
 
 Python file that let you write commands
 '''

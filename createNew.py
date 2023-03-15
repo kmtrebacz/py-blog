@@ -1,5 +1,5 @@
 '''
-kmtrebacz/BlogCreator createNew.py
+kmtrebacz/py-blog createNew.py
 
 Python file that get imformation about blog and create it.
 '''
