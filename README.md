@@ -1,4 +1,4 @@
-BlogCreator
+py-blog
 ===========
 
 App that will allow you to build your own blog, write new entries and many more with several easy to remember commands.
