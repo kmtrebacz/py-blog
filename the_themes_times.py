@@ -88,10 +88,11 @@ def main():
      print("Created new post")
 
      print("Adding link to sideNav.html")
-     _postLink = open(os.path.join('./', "sideNav.html"), "w")
-     _postLink.write("<a href='./" + _postFileName + "'>" + _postDate + "-" + _postTitle + "</a>")
+     _postLink = open(os.path.join('./', "sideNav.html"), "a")
+     _postLink.write("<a href='./" + _postFileName + "'>" + _postDate + "-" + _postTitle + "</a><br>")
      _postLink.close()
      print("Added link to sideNav.html")
+    
 
 if __name__ == "__main__":
      main()
