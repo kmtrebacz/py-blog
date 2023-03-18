@@ -18,11 +18,11 @@ def main():
      _postAuthor = input("Enter post author: ")
      _postDate = str(date.today())
 
-     _postFileName = _postDate + "-" +_postTitle + ".php"
+     _postFileName = _postDate + "-" + _postTitle + ".php"
 
      print("Creating new post")
      _newPost = open(os.path.join('./', _postFileName), "w")
-     _newPost.write("<?php include('./top.php');?>" + _postContent + "<?php include('./bottom.php');?>")
+     _newPost.write("<?php include('./top.php');?>" + '<h2 class="blog-post-title mb-1">' + _postTitle + '</h2> <p class="blog-post-meta">' + _postDate + '</p>' + _postContent + "<?php include('./bottom.php');?>")
      _newPost.close()
      print("Created new post")
 
