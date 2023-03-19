@@ -94,4 +94,4 @@ def main():
      if _blogTheme == "1":
           print("1")
      elif _blogTheme == "2":
-          the_themes_times.main(_blogTitle, _blogSubtitle, _blogDescription, _blogAuthor)
+         the_themes_times.main(_blogTitle, _blogSubtitle, _blogDescription, _blogAuthor, _adminPass)
