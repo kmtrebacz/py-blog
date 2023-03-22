@@ -5,11 +5,11 @@ Python file that get imformation about blog and create it.
 '''
 
 
-import os
 import time as t
 from getpass import getpass
 # import themes
 import the_themes_times
+import const
 
 
 _blogTitle = ""
@@ -20,22 +20,17 @@ _blogTheme = ""
 _adminPass = ""
 
 
-# CLEARING CMD
-def clr():
-     os.system('cls')
-
-
 # REPEAT INPUT WHILE ITS NONE
 def inputIsNone(var, inpCont):
      while var == None or var == "":
-          clr()
+          const.clr()
           var = input(inpCont)
 
 
 # REPEAT GETPASS WHILE ITS NONE
 def getPassIsNone(var, inpCont):
      while var == None or var == "":
-          clr()
+          const.clr()
           var = getpass(inpCont)
 
 def main():
@@ -68,7 +63,7 @@ def main():
      _blogTheme = input("Choose a theme for your blog: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
 
      while not (_blogTheme == "1" or _blogTheme == "2" or _blogTheme == 1 or _blogTheme == 2):
-          clr()
+          const.clr()
           _blogTheme = input("Choose a theme for your blog: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
 
 
@@ -85,7 +80,7 @@ def main():
           _adminPassRepeat = getpass("Repeat: ")
      print("Correct")
 
-     clr()
+     const.clr()
      print("Everything is done")
      t.sleep(1.2)
 

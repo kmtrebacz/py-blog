@@ -5,15 +5,12 @@ Main app of all of project.
 '''
 
 
-import os
 import time as t
 import commands
+import const
 
-__VERSION__ = "0.1.4.2"
+__VERSION__ = "0.1.4.3"
 
-
-def clr():
-     os.system('cls')
 
 
 def startApp():

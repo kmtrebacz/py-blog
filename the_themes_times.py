@@ -7,14 +7,12 @@ Python file that create blog in style of The Themes Times
 
 import os
 import time
-
-
-def clr():
-     os.system('cls')
+import const
 
 def main(_Title, _Subtitle, _Description ,_Author, _Pass):
 
      os.mkdir(os.path.join("./", "blog"))
+     os.mkdir(os.path.join("./blog/", "docx-files"))
 
      print("Creating file nav.php")
      nav = open(os.path.join('./blog/',"nav.php"), 'w')

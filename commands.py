@@ -6,14 +6,9 @@ Python file that let you write commands
 
 
 import sys
-import os
 import time as t
 import createNew
-
-
-# CLEARING CMD
-def clr():
-     os.system('cls')
+import const
 
 
 # WHILE COMMANDS INPUT
@@ -38,7 +33,7 @@ def main():
           # CREATING NEW BLOG
           #
           elif inputCommands == "-crtNew":
-               clr()
+               const.clr()
                print(inputCommands)
                createNew.main()
 
