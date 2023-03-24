@@ -9,6 +9,7 @@ At the moment app has 2 themes:
 - Minimalistic full white (in version 0.1.4 don't work)
 
 ### List of all commands
-- `-crtNew` -> it lets you create new blog
+- `-cNew` -> it lets you create new blog
 - `-crntVer` -> it returns to you current version of program
+- `-thms` -> show all avaliable themes, and let you open test page
 - `-quit` -> it let you quit a program

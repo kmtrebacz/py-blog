@@ -32,10 +32,26 @@ def main():
           #
           # CREATING NEW BLOG
           #
-          elif inputCommands == "-crtNew":
+          elif inputCommands == "-cNew":
                const.clr()
                print(inputCommands)
                createNew.main()
+
+          #
+          # SHOWING THEMES
+          #
+          elif inputCommands == "-thms":
+               print(" THEMES ")
+               print("========")
+               print("- the themes times [1]")
+
+               whatOpen = input("Which theme you want to see:")
+
+               if whatOpen == "1":
+                    print("ttt")
+               else:
+                    print("Error")
+
 
 
           #
