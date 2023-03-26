@@ -7,7 +7,7 @@ import getpass
 #print("Current Time =", current_time)
 
 
-_pass = "b"
+_pass = "test"
 _postTitle = ""
 _postContent = ""
 _postAuthor = ""

@@ -10,6 +10,5 @@ At the moment app has 2 themes:
 
 ### List of all commands
 - `-cNew` -> it lets you create new blog
-- `-crntVer` -> it returns to you current version of program
 - `-thms` -> show all avaliable themes, and let you open test page
 - `-quit` -> it let you quit a program

@@ -7,9 +7,8 @@ Python file that get imformation about blog and create it.
 
 import time as t
 from getpass import getpass
-# import themes
-import the_themes_times
-import const
+import src.the_themes_times as the_themes_times
+import src.const as const
 
 
 _blogTitle = ""

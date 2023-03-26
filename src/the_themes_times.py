@@ -7,7 +7,7 @@ Python file that create blog in style of The Themes Times
 
 import os
 import time
-import const
+import src.const
 
 def main(_Title, _Subtitle, _Description ,_Author, _Pass):
 
