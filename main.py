@@ -6,8 +6,8 @@ Main app of all of project.
 
 
 import time as t
-import commands
-import const
+import src.commands
+import src.const
 
 __VERSION__ = "0.1.4.4"
 
