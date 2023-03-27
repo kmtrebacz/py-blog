@@ -4,15 +4,12 @@ kmtrebacz/py-blog main.py
 Main app of all of project.
 '''
 
-
 import sys 
 import time as t
 import src.createNew as createNew
 import src.const as const
 
 __VERSION__ = "0.1.4.5"
-
-
 
 def startApp():
      print("Version: ", __VERSION__)
@@ -59,8 +56,9 @@ def commands():
           elif inputCommands == "-thms":
                const.clr()
 
-               print(" THEMES ")
-               print("========")
+               print("==================")
+               print("      THEMES      ")
+               print("==================")
                print("- the themes times [1]")
 
                whatOpen = input("Which theme you want to see:")
@@ -88,4 +86,6 @@ def commands():
 if __name__ == "__main__":
      startApp()
 
-     commands()
+    commands()
+
+    
