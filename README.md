@@ -10,6 +10,7 @@ At the moment app has 2 themes:
 In future there will be way more themes.
 
 ### List of all commands
+- `-help` -> show all avaliable commands
 - `-cNew` -> it lets you create new blog
 - `-thms` -> show all avaliable themes, and let you open test page
 - `-quit` -> it let you quit a program

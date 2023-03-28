@@ -40,6 +40,7 @@ def commands():
                print("==================")
                print("-help  ->  show all avaliable commands")
                print("-cNew  ->  create new blog")
+               print("-thms  ->  show all avaliable themes, and let you open test page")
                print("-quit  ->  quit a program")
 
           #
@@ -56,9 +57,9 @@ def commands():
           elif inputCommands == "-thms":
                const.clr()
 
-               print("==================")
-               print("      THEMES      ")
-               print("==================")
+               print("====================")
+               print("|      THEMES      |")
+               print("====================")
                print("- the themes times [1]")
 
                whatOpen = input("Which theme you want to see:")
