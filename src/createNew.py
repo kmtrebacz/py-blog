@@ -41,51 +41,54 @@ def main():
      #
      print("Basic informations")
 
-     _blogTitle = input("Enter a blog title: ")
-     inputIsNone(_blogTitle, "Enter a blog title: ")
+     _blogTitle = input("Blog title: ")
+     inputIsNone(_blogTitle, "Blog title: ")
 
-     _blogSubtitle = input("Enter a blog subtitle: ")
-     inputIsNone(_blogSubtitle, "Enter a blog subtitle: ")
+     _blogSubtitle = input("Blog subtitle: ")
+     inputIsNone(_blogSubtitle, "Blog subtitle: ")
 
-     _blogDescription = input("Enter a blog description: ")
-     inputIsNone(_blogDescription, "Enter a blog description: ")
+     _blogDescription = input("Blog description: ")
+     inputIsNone(_blogDescription, "Blog description: ")
 
-     _blogAuthor = input("Enter your name: ")
-     inputIsNone(_blogDescription, "Enter your name: ")
+     _blogAuthor = input("Your name: ")
+     inputIsNone(_blogDescription, "Your name: ")
 
 
      #
      # BLOG'S APPEARANCE
      #
-     print("\nAppearance")
+     print("\n========================")
+     print("|      Appearance      |")
+     print("========================")
 
-     _blogTheme = input("Choose a theme for your blog: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
+     _blogTheme = input("Blog theme: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
 
      while not (_blogTheme == "1" or _blogTheme == "2" or _blogTheme == 1 or _blogTheme == 2):
           const.clr()
-          _blogTheme = input("Choose a theme for your blog: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
+          _blogTheme = input("Blog theme: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
 
 
      #
      # BLOG'S MANAGMENT
      #
-     print("\nManagement")
+     print("\n========================")
+     print("|      Management      |")
+     print("========================")
 
-     _adminPass = getpass("Enter a password that you will use, when you want to log in to managment side: ")
-     getPassIsNone(_adminPass, "Enter a password that you will use, when you want to log in to managment side: ")
+     _adminPass = getpass("Password:")
+     getPassIsNone(_adminPass, "Password:")
 
-     _adminPassRepeat = getpass("Repeat: ")   #Checking password
+     _adminPassRepeat = getpass("Repeat password: ")   #Checking password
      while _adminPass != _adminPassRepeat: 
-          _adminPassRepeat = getpass("Repeat: ")
+          _adminPassRepeat = getpass("Repeat password: ")
      print("Correct")
 
      const.clr()
-     print("Everything is done")
-     t.sleep(1.2)
 
+     t.sleep(1)
      print("\nNow, will be created blog for you ;)")
 
      if _blogTheme == "1":
-          print("1")
+          print("This blog theme don't work.")
      elif _blogTheme == "2":
          the_themes_times.main(_blogTitle, _blogSubtitle, _blogDescription, _blogAuthor, _adminPass)
