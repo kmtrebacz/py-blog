@@ -18,9 +18,6 @@ def main(_Title, _Subtitle, _Description ,_Author, _Pass):
 
      print("Creating file nav.php")
 
-     nav_file = open("../themes/ttt/nav.php", "r")
-     #nav_file.read()
-
      nav = open(os.path.join('./blog/',"nav.php"), 'w')
      nav.write('<nav class="nav d-flex justify-content-center"> <a class="p-2 link-secondary" href="index.php#all-posts">All posts</a> </nav> <a class="p-2 link-secondary" href="#">Newest Post</a>')
      nav.close()
@@ -76,13 +73,12 @@ def main(_Title, _Subtitle, _Description ,_Author, _Pass):
 import os
 from datetime import datetime
 from datetime import date
-import getpass from getpass
+from getpass import *
 
 #current_time = datetime.now().strftime("%H:%M:%S")
 #print("Current Time =", current_time)
 
-
-_pass = """ + _Pass + """
+_pass = "test"
 _postTitle = ""
 _postContent = ""
 _postAuthor = ""

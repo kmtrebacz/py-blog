@@ -84,7 +84,7 @@ def commands():
 
 
 if __name__ == "__main__":
-     startApp()
+    startApp()
 
     commands()
 
