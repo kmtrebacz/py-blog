@@ -7,7 +7,7 @@ App that will allow you to build your own blog, write new entries and many more 
 At the moment app has 2 themes:
 - The Themes Times
 - Minimalistic full white (in version 0.1.4 don't work)
-In future there will be way more themes.
+- In future there will be way more themes.
 
 ### List of all commands
 - `-help` -> show all avaliable commands
