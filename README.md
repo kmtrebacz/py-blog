@@ -11,7 +11,7 @@ App that will allow you to build your own blog, write new entries and many more 
 - `xampp`
 
 ## How to use it?
-#### Creating first blog and opening it
+### Creating first blog and opening it
 - At first go to py-blog directory
 - Open that directory using cmd
 - In cmd ype `py main.py` or `python main.py`
@@ -19,7 +19,7 @@ App that will allow you to build your own blog, write new entries and many more 
 - After creating blog move `blog` folder to `/xampp/htdocs`
 - Start xampp app and start apache
 - Then in your internet browser type `localhost/blog`
-#### Adding first post
+### Adding first post
 - Go to `/xampp/htdocs/blog/docx-files`
 - In `docx-files` folder put your post's content file (must be .docx)
 - Now go to `/xampp/htdocs/blog/`
