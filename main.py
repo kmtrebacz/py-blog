@@ -9,7 +9,7 @@ import time as t
 import src.createNew as createNew
 import src.const as const
 
-__VERSION__ = "0.1.4.5"
+__VERSION__ = "0.2"
 
 def startApp():
      print("Version: ", __VERSION__)
@@ -20,7 +20,6 @@ def startApp():
 ██╔═══╝   ╚██╔╝ ╚════╝██╔══██╗██║     ██║   ██║██║   ██║
 ██║        ██║        ██████╔╝███████╗╚██████╔╝╚██████╔╝
 ╚═╝        ╚═╝        ╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝ 
-
 """)
      t.sleep(1.5)
 

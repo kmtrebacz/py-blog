@@ -39,7 +39,9 @@ def main():
      #
      # BASIC INFOTMATIONS ABOUT BLOG
      #
-     print("Basic informations")
+     print("\n================================")
+     print("|      Basic informations      |")
+     print("================================")
 
      _blogTitle = input("Blog title: ")
      inputIsNone(_blogTitle, "Blog title: ")
