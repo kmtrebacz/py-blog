@@ -40,7 +40,7 @@ However, there will be more themes added in the future!
 
 # Command List
 Here are all the commands you can use in py-blog:
-- `-help`: Displays all available commands
-- `-cNew`: Allows you to create a new blog
-- `-thms`: Displays all available themes and allows you to open a test page
-- `-quit`: Lets you quit the program
+- `help`: Displays all available commands
+- `cNew`: Allows you to create a new blog
+- `thms`: Displays all available themes and allows you to open a test page
+- `quit`: Lets you quit the program

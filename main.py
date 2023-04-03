@@ -37,10 +37,10 @@ def commands():
                print("==================")
                print("|      HELP      |")
                print("==================")
-               print("-help  ->  show all avaliable commands")
-               print("-cNew  ->  create new blog")
-               print("-thms  ->  show all avaliable themes, and let you open test page")
-               print("-quit  ->  quit a program")
+               print("help  ->  show all avaliable commands")
+               print("cNew  ->  create new blog")
+               print("thms  ->  show all avaliable themes, and let you open test page")
+               print("quit  ->  quit a program")
 
           #
           # CREATING NEW BLOG
