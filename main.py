@@ -31,7 +31,7 @@ def commands():
           #
           # HELP
           #
-          if inputCommands == "-help":
+          if inputCommands == "help":
                const.clr()
 
                print("==================")
@@ -45,7 +45,7 @@ def commands():
           #
           # CREATING NEW BLOG
           #
-          elif inputCommands == "-cNew":
+          elif inputCommands == "cNew":
                const.clr()
 
                createNew.main()
@@ -53,7 +53,7 @@ def commands():
           #
           # SHOWING THEMES
           #
-          elif inputCommands == "-thms":
+          elif inputCommands == "thms":
                const.clr()
 
                print("====================")
@@ -71,7 +71,7 @@ def commands():
           #
           # QUIT
           #
-          elif inputCommands == "-quit":
+          elif inputCommands == "quit":
                const.clr()
 
                sys.exit(0)
