@@ -6,7 +6,7 @@ from datetime import date
 from getpass import *
 
 
-_pass = "{_Pass}"
+_pass = "<_Pass>"
 _postTitle = ""
 _postContent = ""
 _postAuthor = ""
@@ -15,7 +15,7 @@ def main():
      checkingPass = getpass("Password:")
 
      if checkingPass == _pass:
-         # password
+         # title
         _postTitle = input("Enter post title: ")
         
         # content - docx to html
@@ -44,14 +44,14 @@ def main():
 
         # new post file
         print("Creating new post")
-        _newPost = open(os.path.join('./', _postFileName), "w")
+        _newPost = open(os.path.join('./', _postFileName), "w", encoding='utf-8')
         _newPost.write(f"""<?php include('./top.php');?><h2 class="blog-post-title mb-1"> {_postTitle} </h2> <p class="blog-post-meta"> {_postDate} </p> {_postContent} <?php include('./bottom.php');?>""")
         _newPost.close()
         print("Created new post")
 
         # update sideNav
         print("Adding link to sideNav.html")
-        _postLink = open(os.path.join('./', "sideNav.html"), "a")
+        _postLink = open(os.path.join('./', "sideNav.html"), "a", encoding='utf-8')
         _postLink.write("<a href='./" + _postFileName + "'>" + _postDate + "-" + _postTitle + "</a><br>")
         _postLink.close()
         print("Added link to sideNav.html")
@@ -61,4 +61,3 @@ def main():
 
 if __name__ == "__main__":
      main()
-

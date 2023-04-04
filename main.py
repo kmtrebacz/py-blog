@@ -9,7 +9,7 @@ import time as t
 import src.createNew as createNew
 import src.const as const
 
-__VERSION__ = "0.2"
+__VERSION__ = "0.2.1"
 
 def startApp():
      print("Version: ", __VERSION__)
@@ -31,29 +31,21 @@ def commands():
           #
           # HELP
           #
-          if inputCommands == "help":
+          if inputCommands == "show -help":
                const.clr()
 
                print("==================")
                print("|      HELP      |")
                print("==================")
-               print("help  ->  show all avaliable commands")
-               print("cNew  ->  create new blog")
-               print("thms  ->  show all avaliable themes, and let you open test page")
+               print("show -help  ->  show all avaliable commands")
+               print("show -themes  ->  show all avaliable themes, and let you open test page")
+               print("create -blog  ->  create new blog")
                print("quit  ->  quit a program")
-
-          #
-          # CREATING NEW BLOG
-          #
-          elif inputCommands == "cNew":
-               const.clr()
-
-               createNew.main()
 
           #
           # SHOWING THEMES
           #
-          elif inputCommands == "thms":
+          elif inputCommands == "show -themes":
                const.clr()
 
                print("====================")
@@ -67,6 +59,15 @@ def commands():
                     print("ttt")
                else:
                     print("Error")
+
+
+          #
+          # CREATING NEW BLOG
+          #
+          elif inputCommands == "create -blog":
+               const.clr()
+
+               createNew.main()
 
           #
           # QUIT

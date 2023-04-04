@@ -34,13 +34,13 @@ Here's how to get started with py-blog:
 # Themes
 Currently, py-blog offers two themes:
 - The Themes Times
-- Minimalistic full white theme (which is currently not functional in version 0.2).
+- Minimalistic full white theme (which is currently not functional in version 0.2.1).
 
 However, there will be more themes added in the future!
 
 # Command List
 Here are all the commands you can use in py-blog:
-- `help`: Displays all available commands
-- `cNew`: Allows you to create a new blog
-- `thms`: Displays all available themes and allows you to open a test page
+- `show -help`: Displays all available commands
+- `show -themes`: Displays all available themes and allows you to open a test page
+- `create -blog`: Allows you to create a new blog
 - `quit`: Lets you quit the program

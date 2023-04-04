@@ -1,1 +1,0 @@
-'<nav class="nav d-flex justify-content-center"> <a class="p-2 link-secondary" href="index.php#all-posts">All posts</a> </nav> <a class="p-2 link-secondary" href="#">Newest Post</a>'
