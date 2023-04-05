@@ -5,9 +5,9 @@ Python file that get imformation about blog and create it.
 '''
 
 
+import src.blogFileCreate as blogFileCreate
 import time as t
 from getpass import getpass
-import src.the_themes_times as the_themes_times
 import src.const as const
 
 
@@ -63,7 +63,7 @@ def main():
      print("|      Appearance      |")
      print("========================")
 
-     _blogTheme = input("Blog theme: \n [1] -> minimalistic-full-white \n [2] -> the-themes-times \n")
+     _blogTheme = input("Blog theme: \n [1] -> the-themes-times \n [2] -> minimalistic-full-white \n")
 
      while not (_blogTheme == "1" or _blogTheme == "2" or _blogTheme == 1 or _blogTheme == 2):
           const.clr()
@@ -91,6 +91,6 @@ def main():
      print("\nNow, will be created blog for you ;)")
 
      if _blogTheme == "1":
-          print("This blog theme don't work.")
+         blogFileCreate.ttt(_blogTitle, _blogSubtitle, _blogDescription, _blogAuthor, _adminPass)
      elif _blogTheme == "2":
-         the_themes_times.main(_blogTitle, _blogSubtitle, _blogDescription, _blogAuthor, _adminPass)
+          print("This blog theme don't work.")

@@ -5,11 +5,14 @@ Main app of all of project.
 '''
 
 import sys 
+import os
 import time as t
-import src.createNew as createNew
+import src.blogConfig as blogConfig
 import src.const as const
+import webbrowser
 
-__VERSION__ = "0.2.1"
+
+__VERSION__ = "0.2.2"
 
 def startApp():
      print("Version: ", __VERSION__)
@@ -26,7 +29,7 @@ def startApp():
 
 def commands():
      while True:
-          inputCommands = input(" > ")
+          inputCommands = input("\n > ")
 
           #
           # HELP
@@ -51,14 +54,11 @@ def commands():
                print("====================")
                print("|      THEMES      |")
                print("====================")
-               print("- the themes times [1]")
+               print("- the themes times -> --ttt")
 
-               whatOpen = input("Which theme you want to see:")
 
-               if whatOpen == "1":
-                    print("ttt")
-               else:
-                    print("Error")
+          elif inputCommands == "show -themes --ttt":
+               webbrowser.open(os.path.join('./themes/ttt', 'ttt.html'), new=2)
 
 
           #
@@ -67,7 +67,7 @@ def commands():
           elif inputCommands == "create -blog":
                const.clr()
 
-               createNew.main()
+               blogConfig.main()
 
           #
           # QUIT
